@@ -1,6 +1,6 @@
 # <a name="about-project"> School_Library</a>
 
-This app is a tool to record what books are in the library and who borrows them. OOP concepts used for implementing this project.
+The Blog app will be a classic example of a blog website. This app  will provide a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 <!-- TABLE OF CONTENTS -->
 
@@ -32,9 +32,9 @@ This app is a tool to record what books are in the library and who borrows them.
 
 ### Key Features <a name="key-features"></a>
 
-- **Add new students or teachers.**
-- **Add new books**
-- **Save records of who borrowed a given book and when**
+- **Add new post.**
+- **Add new likes**
+- **Explore more information about the post**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -90,13 +90,13 @@ Clone the project using one of the options.
 Using SSH-key:
 
 ```
-git clone git@github.com:Ali-0111/oop_school.git
+git clone git@github.com:Ali-0111/blog_app.git
 ```
 
 Using HTTPS:
 
 ```
-git clone https://github.com/Ali-0111/oop_school.git
+git clone https://github.com/Ali-0111/blog_app.git
 ```
 
 ### Usage
@@ -108,7 +108,7 @@ git clone https://github.com/Ali-0111/oop_school.git
 3. Choose the terminal (Ubunto WSL) and now you can run the following command to run the file:
 
 ```
-ruby main.rb
+This app is under consturction...
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -127,7 +127,7 @@ ruby main.rb
 
 ## Future Features <a name="future-features"></a>
 
-- **Expand the capabilities of the app by adding a database**
+- **Expand the capabilities of the app by adding a database, UI interface**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
