@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_16_133029) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_17_150354) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,10 +20,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_16_133029) do
     t.date "createdAt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "author_id"
+    t.bigint "user_id"
     t.bigint "post_id"
-    t.index ["author_id"], name: "index_comments_on_author_id"
     t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -32,9 +32,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_16_133029) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "post_id"
-    t.bigint "author_id"
-    t.index ["author_id"], name: "index_likes_on_author_id"
+    t.bigint "user_id"
     t.index ["post_id"], name: "index_likes_on_post_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -42,8 +42,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_16_133029) do
     t.string "text"
     t.date "createdAt"
     t.date "updatedAt"
-    t.integer "commentsCounter"
-    t.integer "likesCounter"
+    t.integer "comments_counter"
+    t.integer "likes_counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "author_id"
@@ -58,7 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_16_133029) do
     t.string "bio"
     t.date "updatedAt"
     t.date "createdAt"
-    t.integer "postsCounter"
+    t.integer "posts_counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "post_id"
@@ -70,9 +70,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_16_133029) do
   end
 
   add_foreign_key "comments", "posts"
-  add_foreign_key "comments", "users", column: "author_id"
+  add_foreign_key "comments", "users"
   add_foreign_key "likes", "posts"
-  add_foreign_key "likes", "users", column: "author_id"
+  add_foreign_key "likes", "users"
   add_foreign_key "posts", "likes"
   add_foreign_key "posts", "users", column: "author_id"
   add_foreign_key "users", "comments"
