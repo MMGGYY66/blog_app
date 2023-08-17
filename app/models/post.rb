@@ -3,13 +3,16 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-  # updates the posts counter for a user.
-  def self.update_post_counter(user)
-    user.update(posts_counter: user.posts_counter.to_i + 1)
-  end
-
+  after_create :update_post_counter
   # return the 5 most recent comments for a given post.
   def self.recent_comments(post, limit = 5)
     post.comments.order(created_at: :desc).limit(limit)
+  end
+
+  # updates the posts counter for a user.
+  private
+
+  def update_post_counter()
+    author.increment!(:posts_counter)
   end
 end
