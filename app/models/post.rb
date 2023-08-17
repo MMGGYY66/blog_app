@@ -5,7 +5,7 @@ class Post < ApplicationRecord
 
   # updates the posts counter for a user.
   def self.update_post_counter(user)
-    user.update(posts_counter: user.posts_counter.to_i + 1) 
+    user.update(posts_counter: user.posts_counter.to_i + 1)
   end
 
   # return the 5 most recent comments for a given post.
