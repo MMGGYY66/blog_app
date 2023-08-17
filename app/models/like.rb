@@ -3,7 +3,7 @@ class Like < ApplicationRecord
   belongs_to :post
 
   def self.update_likes_counter(post = post)
-    post.update(likesCounter: post.likesCounter.to_i + 1) 
+    post.update(likes_counter: post.likes_counter.to_i + 1) 
   end
 
 end
