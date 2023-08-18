@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   let(:author) { User.new(name: 'Ahmad', posts_counter: 0) }
 
-  let(:post) {
+  let(:post) do
     Post.new(author: author, title: 'Day of the Week', comments_counter: 0, likes_counter: 0)
-  }
+  end
 
   it 'This should be in-valid, title = nil' do
     post.title = nil
@@ -31,7 +31,7 @@ RSpec.describe Post, type: :model do
 
     post1 = Post.create(author: author, title: 'Coding day', comments_counter: 0, likes_counter: 0)
 
-    comment1 = Comment.create(user: author, post: post1, text: 'nice')
+    Comment.create(user: author, post: post1, text: 'nice')
     comment2 = Comment.create(user: author, post: post1, text: 'good')
     comment3 = Comment.create(user: author, post: post1, text: 'bad')
     comment4 = Comment.create(user: author, post: post1, text: 'wonderfull')
@@ -46,8 +46,8 @@ RSpec.describe Post, type: :model do
 
     post1 = Post.create(author: author, title: 'Coding day', comments_counter: 0, likes_counter: 0)
 
-    comment1 = Comment.create(user: author, post: post1, text: 'nice')
-    comment2 = Comment.create(user: author, post: post1, text: 'good')
+    Comment.create(user: author, post: post1, text: 'nice')
+    Comment.create(user: author, post: post1, text: 'good')
 
     expect(post1.comments_counter).to eq(2)
   end
