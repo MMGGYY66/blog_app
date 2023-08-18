@@ -6,11 +6,6 @@ ruby '3.0.2'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.7'
 
-# Run against this stable release
-group :development, :test do
-  gem 'rspec-rails'
-end
-
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
@@ -69,6 +64,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'rspec-rails'
 end
 
 group :test do
@@ -76,4 +72,5 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'rspec-rails'
 end
