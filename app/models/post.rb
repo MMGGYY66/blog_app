@@ -3,10 +3,9 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-  Title must not be blank.
   validates :title, presence: true, length: { maximum: 250 }
-  validates :comments_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0}
-  validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0}
+  validates :comments_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   after_create :update_post_counter
   # return the 5 most recent comments for a given post.
