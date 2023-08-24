@@ -23,11 +23,17 @@ html {
   font-size: 62.5%;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 ul {
   list-style: none;
 }
 
 p,
+a,
 button,
 span {
   font-size: 1.6rem;
@@ -38,10 +44,6 @@ span {
   margin: 4rem;
 }
 
-.users_container {
-  border: 1px solid black;
-}
-
 .user_info {
   display: flex;
   justify-content: space-between;
@@ -49,7 +51,6 @@ span {
   gap: 4rem;
   margin: 2rem 0;
   padding: 2rem;
-  border: 1px solid black;
 }
 
 .details {
@@ -71,5 +72,8 @@ span {
 
 .post_details {
   margin: 1rem 0;
+}
+
+.border {
   border: 1px solid black;
 }

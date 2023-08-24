@@ -1,1 +1,9 @@
-<p>Here is only 1 - post for the user</p>
+<div class="post&comments border">
+  <%= render partial: 'post_comments',
+    locals: { post: @post, user: @user}
+  %>
+
+  <%= render partial: 'shared/post_comments',
+    locals: { comments:@comments}
+  %>
+</div>
