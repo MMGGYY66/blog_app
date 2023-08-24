@@ -1,1 +1,5 @@
-<p> Here is list of all users. Their picture and number of posts</p>
+<div class="users_container">
+  <% @users.each do |user| %>
+    <%= render partial:'user_info', locals: { user: user} %>
+  <% end %>
+</div>
