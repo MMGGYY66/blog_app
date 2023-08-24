@@ -1,1 +1,13 @@
-<p>Details for the a user. picture, name, all posts</p>
+<div class="user_information">
+  <%= render partial:'user_info', locals: { user: @user } %>
+  <%= render partial:'user_bio', locals: { name: @user.bio } %>
+
+  <ul class="posts_list">
+    <% @recent_posts.each_with_index do |post,i| %>
+      <%= render partial: 'user_posts',
+        locals: { post: post, order: i + 1 }
+      %>
+    <% end %>
+  </ul>
+  <button>See all Posts</button>
+</div>
