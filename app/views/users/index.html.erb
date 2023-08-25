@@ -1,1 +1,7 @@
-<p> Here is list of all users. Their picture and number of posts</p>
+<div class="users_container border">
+  <ul class = "users_list">
+    <% @users.each do |user| %>
+      <%= render partial:'shared/user_profile', locals: { user: user} %>
+    <% end %>
+  </ul>
+</div>

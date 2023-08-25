@@ -1,1 +1,17 @@
-<p>Details for the a user. picture, name, all posts</p>
+<div class="user_information">
+  <%= render partial:'shared/user_profile', locals: { user: @user } %>
+  <%= render partial:'user_bio', locals: { name: @user.bio } %>
+
+  <ul class="posts_list">
+    <% @recent_posts.each_with_index do |post,i| %>
+      <li>
+        <a href="<%= user_post_path(@user, post)%>">
+          <%= render partial: 'shared/user_posts',
+            locals: { post: post}
+          %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+  <a href="<%= user_posts_path(@user) %>">Show all the post</a>
+</div>

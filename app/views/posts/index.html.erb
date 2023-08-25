@@ -1,1 +1,21 @@
-<p>Here is all the posts for the user</p>
+<div class="posts_for_user">
+  <%= render partial:'shared/user_profile',
+    locals: { user: @user }
+  %>
+  <ul class="posts_list border">
+    <% @posts.each_with_index do |post,i| %>
+      <li>
+        <a href="<%= user_post_path(@user, post) %>">
+          <%= render partial: 'shared/user_posts',
+            locals: { post: post, order: i + 1 }
+          %>
+          <div class="border">
+            <%= render partial: 'shared/post_comments',
+              locals: { comments: post.comments, order: i + 1 }
+            %>
+          </div>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>
