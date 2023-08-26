@@ -85,6 +85,7 @@ span {
   align-items: center;
 }
 
-.add_comment {
+.add_comment,
+.create_post {
   border: 1px solid black;
 }
