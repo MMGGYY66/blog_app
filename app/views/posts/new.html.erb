@@ -1,13 +1,5 @@
 <h2>Enter details for a new Post by (first_user):</h2>
-<% if @new_post.errors.any? %>
-  <div>
-    <% @new_post.errors.full_messages.each do |message| %>
-      <%= message%>
-    <% end %>
-  </div>
-<% end %>
-
-<%= form_with model:@new_post, url: user_posts_path, method: :post, scope: :post do |form| %>
+<%= form_with model: @post, url: user_posts_path, method: :post, scope: :post do |form| %>
   <div class="inner_wrapper">
     <div>
       <%= form.label :title %>
@@ -17,6 +9,6 @@
       <%= form.label :text %>
       <%= form.text_area :text, class:"text" %>
     </div>
-    <%= form.submit 'Create User', class:'submit' %>
+    <%= form.submit 'Create Post', class:'submit' %>
   </div>
 <% end %>
