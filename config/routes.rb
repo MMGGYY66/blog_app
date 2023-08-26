@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :users do
-    resources :posts
+    resources :posts do
+        resources :comments
+        resources :likes
+    end
   end
-  resources :posts
   root 'users#index'
 end

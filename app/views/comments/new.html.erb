@@ -1,0 +1,11 @@
+<h2>Enter details for a new comment by (first_user):</h2>
+
+<%= form_with model:@new_comment, url: user_post_comments_path, method: :post, scope: :comment do |form| %>
+  <div class="inner_wrapper">
+    <div>
+      <%= form.label :text %>
+      <%= form.text_area :text , class:"title", placeholder: "Add Comment here" %>
+    </div>
+    <%= form.submit 'Add Comment', class:'submit' %>
+  </div>
+<% end %>

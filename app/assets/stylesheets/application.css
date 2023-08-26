@@ -77,3 +77,15 @@ span {
 .border {
   border: 1px solid black;
 }
+
+.inner_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add_comment,
+.create_post {
+  border: 1px solid black;
+}
