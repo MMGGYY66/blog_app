@@ -16,13 +16,7 @@ class PostsController < ApplicationController
 
   def create
     @user = User.find(params[:user_id])
-    @post = Post.new(
-      author: current_user,
-      likes_counter: 0,
-      comments_counter: 0,
-      title: post_params[:title],
-      text: post_params[:text]
-    )
+    @post = Post.new(author: current_user, **post_params)
 
     if @post.save
       redirect_to user_post_path(@user, @post), notice: 'Post was successfully created.'
