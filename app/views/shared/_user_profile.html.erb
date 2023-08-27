@@ -1,11 +1,9 @@
-<li>
-  <a class="user_info border" href="<%= user_path(user)%>">
-    <div class="user_profile_wrapper">
-      <img class="user_profile" src=<%= user.photo %> alt="user-img">
-    </div>
-    <div class="details">
-      <p class="user_name">UserName: <%= user.name %></p>
-      <p class="number"> Number of Posts: <%= user.posts_counter %></p>
-    </div>
-  </a>
-</li>
+<div class="user_info border">
+  <div class="user_profile_wrapper">
+    <img class="user_profile" src=<%= user.photo %> alt="user-img">
+  </div>
+  <div class="details">
+    <p class="user_name">UserName: <%= user.name %></p>
+    <p class="number"> Number of Posts: <%= user.posts_counter %></p>
+  </div>
+</div>

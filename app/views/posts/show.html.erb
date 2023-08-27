@@ -1,8 +1,8 @@
 <div class="post&comments border">
-  <%= render partial: 'post_comments',
+  <%= render partial: 'post_details',
     locals: { post: @post}
   %>
-  <%= render partial: 'shared/post_comments',
+  <%= render partial: 'shared/comments_of_post',
     locals: { comments:@comments}
   %>
   <a class="add_comment" href="<%= new_user_post_comment_path(@user, @post) %>">Add comment</a>

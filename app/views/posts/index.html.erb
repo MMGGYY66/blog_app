@@ -10,7 +10,7 @@
             locals: { post: post, order: i + 1 }
           %>
           <div class="border">
-            <%= render partial: 'shared/post_comments',
+            <%= render partial: 'shared/comments_of_post',
               locals: { comments: post.comments, order: i + 1 }
             %>
           </div>
