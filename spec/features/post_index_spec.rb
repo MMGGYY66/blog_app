@@ -10,9 +10,9 @@ RSpec.describe 'User show page' do
     @post5 = Post.create(author: @user, title: 'My job', text: 'text for the post')
     @post6 = Post.create(author: @user, title: 'My pc', text: 'text for the post')
 
-    Comment.create(post: @post1, user: @user, text: 'I hope youre ok!' )
-    Comment.create(post: @post1, user: @user, text: 'NO!' )
-    Comment.create(post: @post1, user: @user, text: 'Heyyyyy' )
+    Comment.create(post: @post1, user: @user, text: 'I hope youre ok!')
+    Comment.create(post: @post1, user: @user, text: 'NO!')
+    Comment.create(post: @post1, user: @user, text: 'Heyyyyy')
 
     Like.create(user: @user, post: @post1)
     Like.create(user: @user, post: @post1)
