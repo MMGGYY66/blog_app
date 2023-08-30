@@ -114,7 +114,6 @@ This app is under consturction...
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
-
 ## Authors <a name="authors"></a>
 👤 **Qurban Ali Safari**
 
@@ -142,7 +141,7 @@ This app is under consturction...
 
 ## Contributing <a name="contributing"></a>
 
-I welcome contributions to enhance the functionality and user experience of the Morse_Translator project. If you have any ideas, suggestions, or bug reports, feel free to open an issue or submit a pull request.
+We welcome contributions to enhance the functionality and user experience of the Morse_Translator project. If you have any ideas, suggestions, or bug reports, feel free to open an issue or submit a pull request.
 
 If you'd like to contribute to this project, please follow these steps:
 
@@ -171,7 +170,7 @@ Furthermore, if you would like to get in touch with me, you can find my contact 
 
 ## Acknowledgments <a name="acknowledgements"></a>
 
-I would like to express our gratitude to the Ruby community and Microverse for the readme template.
+We would like to express our gratitude to the Ruby community and Microverse for the readme template.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
