@@ -6,7 +6,8 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
+  # The most_recent method can be further optimized using eager loading to fetch the associated author (user) and to prevent N+1 queries:
   def most_recent(limit_number = 3)
-    posts.order(created_at: :desc).limit(limit_number)
+    posts.includes(:author).order(created_at: :desc).limit(limit_number)
   end
 end
