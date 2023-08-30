@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
-  belongs_to :author, class_name: 'User', foreign_key: 'author_id'
+  # update the belongs_to :user association with the counter_cache option:
+  belongs_to :user, foreign_key: :author_id, counter_cache: true
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
