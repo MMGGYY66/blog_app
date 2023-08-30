@@ -9,6 +9,9 @@ class UsersController < ApplicationController
   def show
     # use eager loading to prevent N+1 query problems.
     @user = User.includes(:bio).find(params[:id])
-    @recent_posts = @user.most_recent
+
+    # use a specific query to fetch only the required posts.
+    # This can help in reducing the data transferred from the database.
+    @recent_posts = @user.most_recent.limit(10) # Adjust the limit as needed
   end
 end
