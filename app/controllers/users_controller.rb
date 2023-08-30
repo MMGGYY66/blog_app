@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   # posts for all users, which helps prevent N+1 query issues when
   # you access @user.posts.
   def index
-    @users = User.all.includes(:posts) # Eager load associated posts
+    @users = User.includes(:posts, :comments).limit(10) # Adjust the limit as needed
   end
 
   def show
