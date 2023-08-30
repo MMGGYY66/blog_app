@@ -7,7 +7,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    # use eager loading to prevent N+1 query problems.
+    @user = User.includes(:bio).find(params[:id])
     @recent_posts = @user.most_recent
   end
 end
