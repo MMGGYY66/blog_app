@@ -21,6 +21,17 @@ class Post < ApplicationRecord
     post.comments.includes(:user).order(created_at: :desc).limit(limit)
   end
 
+  # Instead of directly accessing comments_counter and likes_counter attributes
+  # in your view, you can cache these values in the Post model. This can
+  # help improve performance by reducing the need for additional database queries.
+  def cached_comments_counter
+    Rails.cache.fetch("post_#{id}_comments_counter") { comments_counter }
+  end
+
+  def cached_likes_counter
+    Rails.cache.fetch("post_#{id}_likes_counter") { likes_counter }
+  end
+
   # updates the posts counter for a user.
   private
 
