@@ -1,8 +1,9 @@
 <div class="post_full_details border">
+  <%# update your view to use these cached values %>
   <p class="post_title"> Post#<%= post.id %> by <%= post.author.name %> </p>
   <p class="number">
-    Comments: <%= post.comments_counter %>
-    Likes: <%= post.likes_counter %>
+    Comments: <%= post.cached_comments_counter %>
+    Likes: <%= post.cached_likes_counter %>
   </p>
   <p class="post_title"> <%= post.text %> </p>
 </div>
