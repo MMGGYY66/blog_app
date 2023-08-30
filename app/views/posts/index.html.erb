@@ -1,22 +1,8 @@
 <div class="posts_for_user">
-  <%= render partial:'shared/user_profile',
-    locals: { user: @user }
-  %>
+  <%# use the collection option to render the partials more efficiently. %>
+  <%= render partial: 'shared/user_profile', locals: { user: @user } %>
   <ul class="posts_list border">
-    <% @posts.each_with_index do |post,i| %>
-      <li>
-        <a href="<%= user_post_path(@user, post) %>">
-          <%= render partial: 'shared/user_posts',
-            locals: { post: post, order: i + 1 }
-          %>
-          <div class="border">
-            <%= render partial: 'shared/comments_of_post',
-              locals: { comments: post.comments, order: i + 1 }
-            %>
-          </div>
-        </a>
-      </li>
-    <% end %>
+    <%= render partial: 'shared/user_post_with_comments', collection: @posts, as: :post_with_comments %>
   </ul>
   <a class="create_post" href="<%= new_user_post_path(@user) %>"> Create New Post</a>
 </div>

@@ -1,13 +1,17 @@
 class PostsController < ApplicationController
+  # using the includes method to eager load the posts associated
+  # with the user.
   def index
-    @user = User.find(params[:user_id])
-    @posts = @user.posts
+    @user = User.includes(:posts).find(params[:user_id])
+    @posts = @user.posts.includes[:comments]
   end
 
+  # using the includes method to eager load both the author and
+  # the comments associated with the post
   def show
-    @post = Post.find(params[:id])
+    @post = Post.includes(:author, :comments).find(params[:id])
     @user = @post.author
-    @comments = @post.comments
+    @comments = @post.comments.includes(:user).order(created_at: :desc)
   end
 
   def new

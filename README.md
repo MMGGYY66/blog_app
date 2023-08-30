@@ -114,7 +114,6 @@ This app is under consturction...
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
-
 ## Authors <a name="authors"></a>
 👤 **Qurban Ali Safari**
 
@@ -122,6 +121,13 @@ This app is under consturction...
 - 👤 Twitter:  [qurban_safari](https://twitter.com/qurban_safari)
 - 👤 LinkedIn: [Safari](https://www.linkedin.com/in/ali-safari-linked)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+👤 **Mohamed Gamil Eldimardash**
+- GitHub: [@github](https://github.com/MMGGYY66)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamed-eldimardash-0023a3b5/)
+- Twitter: [twitter](https://twitter.com/MOHAMEDELDIMARd)
+- Facebook: [facebook](https://www.facebook.com/MOHAMED.ELDIMARDASH/)
+- StackOverflow: [stackoverflow](https://stackoverflow.com/users/13605630/mohamed-gamil-eldimardash)
 
 <!-- FUTURE FEATURES -->
 
@@ -135,7 +141,7 @@ This app is under consturction...
 
 ## Contributing <a name="contributing"></a>
 
-I welcome contributions to enhance the functionality and user experience of the Morse_Translator project. If you have any ideas, suggestions, or bug reports, feel free to open an issue or submit a pull request.
+We welcome contributions to enhance the functionality and user experience of the Morse_Translator project. If you have any ideas, suggestions, or bug reports, feel free to open an issue or submit a pull request.
 
 If you'd like to contribute to this project, please follow these steps:
 
@@ -164,7 +170,7 @@ Furthermore, if you would like to get in touch with me, you can find my contact 
 
 ## Acknowledgments <a name="acknowledgements"></a>
 
-I would like to express our gratitude to the Ruby community and Microverse for the readme template.
+We would like to express our gratitude to the Ruby community and Microverse for the readme template.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
