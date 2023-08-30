@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   # with the user.
   def index
     @user = User.includes(:posts).find(params[:user_id])
-    @posts = @user.posts
+    @posts = @user.posts.includes[:comments]
   end
 
   # using the includes method to eager load both the author and
