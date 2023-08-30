@@ -1,7 +1,8 @@
 class Post < ApplicationRecord
   # update the belongs_to :user association with the counter_cache option:
   belongs_to :user, foreign_key: :author_id, counter_cache: true
-  has_many :comments, dependent: :destroy
+  # use eager loading to prevent N+1 query problems
+  has_many :comments, -> { includes(:user) }, dependent: :destroy  
   has_many :likes, dependent: :destroy
 
   validates :title, presence: true, length: { maximum: 250 }
