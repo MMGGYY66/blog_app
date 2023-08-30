@@ -6,7 +6,9 @@ class Comment < ApplicationRecord
 
   after_create :update_comment_counter
 
+  # make the update_comment_counter callback more efficient
+  # by using the update_counters method
   def update_comment_counter
-    post.increment!(:comments_counter)
+    Post.update_counters(post.id, comments_counter: 1)
   end
 end
