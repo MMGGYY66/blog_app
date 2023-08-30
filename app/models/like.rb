@@ -9,7 +9,7 @@ class Like < ApplicationRecord
 
   private
 
-  # make the update_likes_counter callback more efficient by using 
+  # make the update_likes_counter callback more efficient by using
   # the update_counters method
   def update_likes_counter
     Post.update_counters(post.id, likes_counter: 1)
