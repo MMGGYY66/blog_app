@@ -1,0 +1,10 @@
+<ul>
+    <li>
+      <a href="<%= user_post_path(@user, post_with_comments.post) %>">
+        <%= render partial: 'shared/user_posts', locals: { post: post_with_comments.post, order: post_with_comments.order } %>
+        <div class="border">
+          <%= render partial: 'shared/comments_of_post', locals: { comments: post_with_comments.post.comments, order: post_with_comments.order } %>
+        </div>
+      </a>
+    </li>
+</ul>
