@@ -6,8 +6,10 @@ class PostsController < ApplicationController
     @posts = @user.posts
   end
 
+  # using the includes method to eager load both the author and
+  # the comments associated with the post
   def show
-    @post = Post.find(params[:id])
+    @post = Post.includes(:author, :comments).find(params[:id])
     @user = @post.author
     @comments = @post.comments
   end
