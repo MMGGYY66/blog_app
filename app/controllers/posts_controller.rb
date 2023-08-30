@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
+  # using the includes method to eager load the posts associated
+  # with the user.
   def index
-    @user = User.find(params[:user_id])
+    @user = User.includes(:posts).find(params[:user_id])
     @posts = @user.posts
   end
 
